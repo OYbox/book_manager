@@ -21,11 +21,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @Description 用户管理
- * @Date 2020/7/14 16:35
- * @Author by 尘心
- */
+
 @Api(tags = "借阅管理")
 @RestController
 @RequestMapping("/borrow")
@@ -81,7 +77,7 @@ public class BorrowController {
     @ApiOperation("已借阅列表")
     @GetMapping("/borrowed")
     public R borrowedList(Integer userId) {
-        List<BackOut> outs = new ArrayList<>();
+        List<BackOut> outs = new ArrayList<BackOut>();
         if (userId!=null&&userId>0) {
             // 获取所有 已借阅 未归还书籍
             List<Borrow> borrows = borrowService.findBorrowsByUserIdAndRet(userId, Constants.NO);

@@ -122,9 +122,9 @@
                     text+= "<tr align='center'><td>"+num+"</td><td>"+value.nickname+"</td><td>"+value.username+"</td><td>"+value.birth+"</td>" +
                         "<td>"+value.tel+"</td><td>"+value.email+"</td><td>"+value.address+"</td><td>"+value.size+"</td>" +
                         "<td>"+value.ident+"</td><td>"+
-                        "<button class='button green' onclick='updateUser("+value.id+","+value.isAdmin+")'>提权</button> &nbsp;<button class='button yellow empty' onclick='delUser("+value.id+")'>删除</button></td></tr>";
+                        "<button class='button yellow empty' onclick='delUser("+value.id+")'>删除</button></td></tr>";
                 });
-
+/*<button class='button green' onclick='updateUser("+value.id+","+value.isAdmin+")'>提权</button> &nbsp;*/
                 $("#tbody").html(text);
 
                 // 向上取整去总页数
